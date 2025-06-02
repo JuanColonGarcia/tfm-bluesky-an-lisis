@@ -26,17 +26,17 @@ t_sent_map = {
 }
 # Mapeo descriptivo y colores
 color_map = {
-    "Muy negativo": "#8B0000",       # rojo muy oscuro
-    "Negativo": "#FF6347",           # rojo clarito
-    "Neutral o mixto": "#A9A9A9",    # gris
-    "Positivo": "#90EE90",           # verde clarito
-    "Muy positivo": "#006400"        # verde oscuro
+    "Muy negativo": "#8B0000",       
+    "Negativo": "#FF6347",           
+    "Neutral o mixto": "#A9A9A9",    
+    "Positivo": "#90EE90",          
+    "Muy positivo": "#006400"         
 }
 if 'sentiment' in df.columns:
     df['sentiment_desc'] = df['sentiment'].map(t_sent_map).fillna(df['sentiment'])
 
 # 2) Título y descripción
-st.title("📊 Dashboard: Posts sobre el Apagón")
+st.title("Dashboard: Posts sobre el Apagón")
 st.markdown(
     "Explora los posts de Bluesky relacionados con **apagón**: "
     "filtra por fecha, analiza volumen diario, hashtags y más."
