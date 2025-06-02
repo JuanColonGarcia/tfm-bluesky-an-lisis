@@ -32,6 +32,6 @@ df['sentiment'] = df['texto'].apply(
 # 7) Guarda el CSV curado con sentimiento
 df.to_csv('data/apagon_curado.csv', index=False, encoding='utf-8')
 
-print("✅ apagon_curado.csv generado:")
+print("apagon_curado.csv generado:")
 print(f"   Filas originales: {len(pd.read_csv('data/apagon_dataset_last_year.csv'))}")
 print(f"   Filas curadas:    {len(df)}")
