@@ -3,7 +3,6 @@ import os
 from atproto import Client
 from dotenv import load_dotenv
 
-# Carga las variables de entorno desde ../.env
 load_dotenv(os.path.join(os.path.dirname(__file__), "..", ".env"))
 BSY_USER = os.getenv("BSY_USER")
 BSY_PASS = os.getenv("BSY_PASS")
@@ -13,10 +12,8 @@ if not (BSY_USER and BSY_PASS):
 client = Client()
 client.login(BSY_USER, BSY_PASS)   # igual que antes
 
-# Envía un post de prueba
 post = client.send_post("Hello world! I posted this via the Python SDK.")
 
-# Imprime URI y CID
 print("✔️  Post creado:")
 print("    URI:", post.uri)
 print("    CID:", post.cid)
