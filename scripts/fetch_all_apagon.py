@@ -4,7 +4,7 @@ from datetime import datetime, timezone, timedelta
 from atproto import Client, models
 from dotenv import load_dotenv
 
-# Carga las variables de entorno desde ../.env
+# Carga las variables de entorno
 load_dotenv(os.path.join(os.path.dirname(__file__), "..", ".env"))
 BSY_USER = os.getenv("BSY_USER")
 BSY_PASS = os.getenv("BSY_PASS")
@@ -67,4 +67,4 @@ with open(outfile, "w", newline="", encoding="utf-8") as f:
         if not cursor:
             break
 
-print(f"✅ Volcados {total} posts de “apagón” del último año en {outfile}")
+print(f"Volcados {total} posts de “apagón” del último año en {outfile}")
