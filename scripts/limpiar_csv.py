@@ -9,7 +9,7 @@ df = pd.read_csv('data/apagon_dataset_last_year.csv', parse_dates=['fecha'])
 df = df.drop_duplicates(subset='uri')
 
 # 3) Filtra posts demasiado cortos (menos de 20 caracteres)
-df = df[df['texto'].str.len() >= 20]
+#df = df[df['texto'].str.len() >= 20] 
 
 # 4) Filtra posts sin contenido alfabético (solo URLs o caracteres especiales)
 df = df[df['texto'].str.contains(r'[A-Za-zÁÉÍÓÚáéíóúÑñ]')]

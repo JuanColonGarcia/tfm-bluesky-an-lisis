@@ -1,0 +1,32 @@
+1.- restriccion fecha, revisar (posibilidad de encadenar busquedas)
+- por mucho que tu código intente paginar “hasta 365 días atrás”, el endpoint app.bsky.feed.searchPosts sólo devuelve posts que el servidor 
+público ha indexado (aprox. las últimas 4–5 semanas). Paginando con el cursor (encadenando llamadas sucesivas) no vas a llegar más atrás, 
+porque ya no hay más datos disponibles en la búsqueda 
+
+2.- revision proceso bajarme post, entender si son post o respuesta
+- Solo recoge posts actualmente, no respuestas
+- ampliar post
+
+3. Recuperar un post mediante su identificador (URI/CID)
+- realizado
+
+4.- scheduler por debajo
+
+5.- numero de palabras eliminacion
+- filtrado de 20 caracteres, ahora mismo quitado comentaod el codigo
+
+
+6.- no quitamos los emojis (tienen traduccion a texto)embedings revisar
+- No hay un diccionario explícito de emojis, sino que el modelo aprendió, durante su fine-tuning, a asociar estadísticamente cada emoji 
+(o secuencia de sub-tokens) con la clase de sentimiento adecuada.
+- Gracias a que los emojis permanecen en tu texto, el transformer los tiene en cuenta y eso influye en la predicción final de “1 star” a “5 stars”.
+
+7. cuenta de desarrollador??
+
+
+
+
+
+
+
+MIRAR LA PERsISTENCIA TEMA TAREAS

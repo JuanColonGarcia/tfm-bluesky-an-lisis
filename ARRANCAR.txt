@@ -1,0 +1,15 @@
+.venv\Scripts\activate
+streamlit run app_streamlit.py
+
+
+----------------------------------------------
+
+Hasta ahora he trabajado en local con un caso concreto (“apagón”), y ahora he pensado en pasar a una versión más general del sistema. Mi idea sería avanzar en estos puntos:
+
+FUTURO 1. Login con Bluesky para el usuario (manejo seguro de credenciales con App Password). (REVISO BIEN ACCESO PROCESO DE CAPTURA)
+
+IMPORTANTE 2. Scraping dinámico, en función de los inputs del usuario (palabras clave y fechas, hastag). 
+
+FUTURO 3. Procesamiento de datos y análisis de sentimiento. (ORIGINAL)
+
+FUTURO 4. Interfaz web con Flask, donde se puedan visualizar los resultados en gráficos y tablas.??? (IGUAL NO HACE FALTA)
